@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; */
 }
 
 .logo {
@@ -36,7 +36,21 @@
 .card {
   padding: 2em;
 }
-
+.searchText{
+  font-size: "15px";
+  color: #000;
+}
+.header {
+  background-color: white;
+  display: flex;
+  border-width: 2px;
+  border-color: #000;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: aquamarine;
+}
 .read-the-docs {
   color: #888;
 }
