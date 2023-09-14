@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 
 import "./App.css";
@@ -17,7 +18,7 @@ const App = () => {
 
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
-  const renderEachCate = (item) => {
+  const renderEachCate = (item: { id?: number; cate: any; desc: any }) => {
     return (
       <div className="eachCategory">
         <div className="categoryLeft">
@@ -44,7 +45,7 @@ const App = () => {
       </div>
     );
   };
-  const renderEachCard = (item) => {
+  const renderEachCard = (item: any) => {
     return (
       <div className="card">
         <img src={item.image} width={202} height={141} />
@@ -216,13 +217,13 @@ const App = () => {
         </div>
         {/* tail wind */}
         <div className="paginationContainer">
-          <span class="relative z-0 inline-flex">
+          <span className="relative z-0 inline-flex">
             <span aria-disabled="true" aria-label="pagination.previous">
               <span
-                class=" bg-[#22acbf] relative inline-flex items-center mr-4 px-2 py-2 text-sm font-medium text-white bg-gray-line cursor-default rounded-full leading-5 "
+                className=" bg-[#22acbf] relative inline-flex items-center mr-4 px-2 py-2 text-sm font-medium text-white bg-gray-line cursor-default rounded-full leading-5 "
                 aria-hidden="true"
               >
-                <svg class="w-5 h-5" fill="white" viewBox="0 0 20 20">
+                <svg className="w-5 h-5" fill="white" viewBox="0 0 20 20">
                   <path
                     fill-rule="evenodd"
                     d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
@@ -233,62 +234,62 @@ const App = () => {
             </span>
 
             <span aria-current="page">
-              <span class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm border-b-2 border-primary font-medium text-gray-500 bg-white cursor-default leading-5">
+              <span className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm border-b-2 border-primary font-medium text-gray-500 bg-white cursor-default leading-5">
                 1
               </span>
             </span>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 2"
             >
               2
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 3"
             >
               3
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 4"
             >
               4
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 5"
             >
               5
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 6"
             >
               6
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 7"
             >
               7
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 8"
             >
               8
             </a>
             <a
               href=""
-              class="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
+              className="relative inline-flex items-center mx-4 px-2 py-2 -ml-px text-sm font-medium text-gray-text border-b-2 border-gray-line bg-white leading-5 md:hover:opacity-75 md:transition-opacity md:ease-in"
               aria-label="Go to page 9"
             >
               9
@@ -297,14 +298,14 @@ const App = () => {
             <a
               href=""
               rel="next"
-              class="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-white bg-primary rounded-full leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150"
+              className="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-white bg-primary rounded-full leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150"
               aria-label="pagination.next"
             >
               <span
-                class=" bg-[#22acbf] relative inline-flex items-center mr-4 px-2 py-2 text-sm font-medium text-white bg-gray-line cursor-default rounded-full leading-5 "
+                className=" bg-[#22acbf] relative inline-flex items-center mr-4 px-2 py-2 text-sm font-medium text-white bg-gray-line cursor-default rounded-full leading-5 "
                 aria-hidden="true"
               >
-                <svg class="w-5 h-5" fill="white" viewBox="0 0 20 20">
+                <svg className="w-5 h-5" fill="white" viewBox="0 0 20 20">
                   <path
                     fill-rule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -318,40 +319,40 @@ const App = () => {
       </div>
       <footer
         aria-labelledby="footer-heading"
-        class=" lg:mt-28 bg-gray-100 text-black max-w-full"
+        className=" lg:mt-28 bg-gray-100 text-black max-w-full"
       >
-        <h2 id="footer-heading" class="sr-only">
+        <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="pt-10 pb-20 xl:grid xl:grid-cols-3 xl:gap-8">
-            <div class="mb-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="pt-10 pb-20 xl:grid xl:grid-cols-3 xl:gap-8">
+            <div className="mb-8">
               <img
                 width="1903"
                 height="781"
-                class="py-2 h-auto w-[124px]"
+                className="py-2 h-auto w-[124px]"
                 src="https://appliv-gai-production.s3.ap-northeast-1.amazonaws.com/images/logo.png"
                 alt="AI比較ナビ"
               />
             </div>
-            <div class="grid grid-cols-2 gap-8 col-span-2">
+            <div className="grid grid-cols-2 gap-8 col-span-2">
               <div>
-                <ul role="list" class="space-y-6">
-                  <li class="text-sm">
+                <ul role="list" className="space-y-6">
+                  <li className="text-sm">
                     <a
                       href="http://nyle.co.jp/"
                       target="_blank"
-                      class="md:hover:opacity-75 md:transition-opacity md:ease-in"
+                      className="md:hover:opacity-75 md:transition-opacity md:ease-in"
                     >
                       Operation Company
                     </a>
                   </li>
 
-                  <li class="text-sm">
+                  <li className="text-sm">
                     <a
                       href=""
                       target="_blank"
-                      class="md:hover:opacity-75 md:transition-opacity md:ease-in"
+                      className="md:hover:opacity-75 md:transition-opacity md:ease-in"
                     >
                       Inquiry
                     </a>
@@ -360,22 +361,22 @@ const App = () => {
               </div>
 
               <div>
-                <ul role="list" class="space-y-6">
-                  <li class="text-sm">
+                <ul role="list" className="space-y-6">
+                  <li className="text-sm">
                     <a
                       href=""
                       target="_blank"
-                      class="md:hover:opacity-75 md:transition-opacity md:ease-in"
+                      className="md:hover:opacity-75 md:transition-opacity md:ease-in"
                     >
                       Terms of Services
                     </a>
                   </li>
 
-                  <li class=" text-sm">
+                  <li className=" text-sm">
                     <a
                       href=""
                       target="_blank"
-                      class="md:hover:opacity-75 md:transition-opacity md:ease-in"
+                      className="md:hover:opacity-75 md:transition-opacity md:ease-in"
                     >
                       Privacy Policy
                     </a>
